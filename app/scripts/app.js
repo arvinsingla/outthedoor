@@ -21,6 +21,23 @@ angular.module('outTheDoorApp', [])
   'interval': 300000,
   'url': 'https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20weather.forecast%20where%20woeid%20%3D%2012511881%20AND%20u%3D%22c%22&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys'
 })
+.directive('transitPrediction', function() {
+  return {
+    template: '{{ prediction }}',
+    link: function(scope, element) {
+      var minutes = scope.prediction._minutes ? scope.prediction._minutes : '';
+      if (minutes > '1') {
+        element.text(minutes + ' minutes');
+      } else if (minutes === '1') {
+        element.text(minutes + ' minute');
+      } else if (minutes === '0') {
+        element.text('Arriving');
+      } else {
+        element.text('');
+      }
+    }
+  };
+})
 .factory('weatherIcon', [function() {
   // Map yahoo codes to weather-icons
   // https://gist.githubusercontent.com/aloncarmel/8575527/raw/313aee5cfa2584a8cdbf4c756d0203bccd04d752/weathericon
