@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<body copyright="All data copyright Toronto Transit Commission 2015.">
+<predictions agencyTitle="Toronto TTC" routeTitle="504-King" routeTag="504" stopTitle="King St West At Bathurst St" stopTag="2253">
+<direction title="East - 504 King Replacement Bus towards Broadview">
+<prediction epochTime="1420812399825" seconds="351" minutes="5" isDeparture="false" branch="504" dirTag="504_0_504BUS" vehicle="1226" block="504_77_521" tripTag="25579069"/>
+<prediction epochTime="1420812487558" seconds="439" minutes="7" isDeparture="false" branch="504" dirTag="504_0_504BUS" vehicle="1020" block="504_78_531" tripTag="25579070"/>
+<prediction epochTime="1420812751628" seconds="703" minutes="11" isDeparture="false" branch="504" dirTag="504_0_504BUS" vehicle="1032" block="504_80_551" tripTag="25579072"/>
+<prediction epochTime="1420812889998" seconds="842" minutes="14" isDeparture="false" branch="504" dirTag="504_0_504BUS" vehicle="1507" block="504_79_541" tripTag="25579071"/>
+<prediction epochTime="1420813043451" seconds="995" minutes="16" isDeparture="false" affectedByLayover="true" branch="504" dirTag="504_0_504BUS" vehicle="1585" block="504_81_561" tripTag="25579073"/>
+</direction>
+<direction title="East - 504 King towards Broadview Station via King">
+<prediction epochTime="1420812241686" seconds="193" minutes="3" isDeparture="false" branch="504" dirTag="504_0_504" vehicle="4030" block="504_9_90" tripTag="25578784"/>
+<prediction epochTime="1420812397618" seconds="349" minutes="5" isDeparture="false" branch="504" dirTag="504_0_504" vehicle="4075" block="504_10_100" tripTag="25578785"/>
+<prediction epochTime="1420812640366" seconds="592" minutes="9" isDeparture="false" branch="504" dirTag="504_0_504" vehicle="4131" block="504_37_101" tripTag="25578786"/>
+<prediction epochTime="1420812702825" seconds="654" minutes="10" isDeparture="false" branch="504" dirTag="504_0_504" vehicle="4099" block="504_43_281" tripTag="25579047"/>
+<prediction epochTime="1420812967952" seconds="920" minutes="15" isDeparture="false" branch="504" dirTag="504_0_504" vehicle="4176" block="504_31_11" tripTag="25579050"/>
+</direction>
+<direction title="East - 504 King towards Broadview">
+<prediction epochTime="1420815309822" seconds="3261" minutes="54" isDeparture="false" affectedByLayover="true" branch="504" dirTag="504_0_RQBR" vehicle="4042" block="501_74_461" tripTag="25579042"/>
+</direction>
+<message text="TTC Customer Service 416-393-4636 (INFO)" priority="Normal"/>
+</predictions>
+<predictions agencyTitle="Toronto TTC" routeTitle="504-King" routeTag="504" stopTitle="King St West At Bathurst St" stopTag="7211">
+<direction title="West - 504 King Replacement Bus towards Roncesvalles and Queen">
+<prediction epochTime="1420812194692" seconds="146" minutes="2" isDeparture="false" branch="504" dirTag="504_1_504BUS" vehicle="7764" block="504_88_631" tripTag="25579305"/>
+<prediction epochTime="1420812924550" seconds="876" minutes="14" isDeparture="false" branch="504" dirTag="504_1_504BUS" vehicle="7682" block="504_89_641" tripTag="25579306"/>
+<prediction epochTime="1420815021985" seconds="2974" minutes="49" isDeparture="false" affectedByLayover="true" branch="504" dirTag="504_1_504BUS" vehicle="8109" block="504_85_601" tripTag="25579302"/>
+</direction>
+<direction title="West - 504 King Replacement Bus towards Dundas West Station via King">
+<prediction epochTime="1420815351348" seconds="3303" minutes="55" isDeparture="false" affectedByLayover="true" branch="504" dirTag="504_1_504BUSdw" vehicle="1218" block="504_76_511" tripTag="25579293"/>
+</direction>
+<direction title="West - 504 King towards Dundas West Station via King variant #1">
+<prediction epochTime="1420813877752" seconds="1829" minutes="30" isDeparture="false" branch="504" dirTag="504_1_504" vehicle="4105" block="504_45_301" tripTag="25579263"/>
+<prediction epochTime="1420814310366" seconds="2262" minutes="37" isDeparture="false" affectedByLayover="true" branch="504" dirTag="504_1_504" vehicle="4172" block="504_1_10" tripTag="25579206"/>
+<prediction epochTime="1420814550366" seconds="2502" minutes="41" isDeparture="false" affectedByLayover="true" branch="504" dirTag="504_1_504" vehicle="4096" block="504_2_20" tripTag="25579207"/>
+<prediction epochTime="1420814834586" seconds="2786" minutes="46" isDeparture="false" affectedByLayover="true" branch="504" dirTag="504_1_504" vehicle="4038" block="504_3_30" tripTag="25579208"/>
+<prediction epochTime="1420814839629" seconds="2791" minutes="46" isDeparture="false" affectedByLayover="true" branch="504" dirTag="504_1_504" vehicle="4050" block="504_32_21" tripTag="25579265"/>
+</direction>
+<direction title="West - 504 King towards Dundas West Station via King">
+<prediction epochTime="1420812110961" seconds="63" minutes="1" isDeparture="false" branch="504" dirTag="504_1_504rush" vehicle="4040" block="504_18_180" tripTag="25579193"/>
+<prediction epochTime="1420812230240" seconds="182" minutes="3" isDeparture="false" branch="504" dirTag="504_1_504rush" vehicle="4027" block="504_19_190" tripTag="25579194"/>
+<prediction epochTime="1420812246271" seconds="198" minutes="3" isDeparture="false" branch="504" dirTag="504_1_504rush" vehicle="4174" block="504_20_200" tripTag="25579195"/>
+<prediction epochTime="1420812416614" seconds="368" minutes="6" isDeparture="false" branch="504" dirTag="504_1_504rush" vehicle="4180" block="504_21_210" tripTag="25579196"/>
+<prediction epochTime="1420812883044" seconds="835" minutes="13" isDeparture="false" branch="504" dirTag="504_1_504rush" vehicle="4194" block="504_22_220" tripTag="25579197"/>
+</direction>
+<message text="TTC Customer Service 416-393-4636 (INFO)" priority="Normal"/>
+</predictions>
+<predictions agencyTitle="Toronto TTC" routeTitle="511-Bathurst" routeTag="511" stopTitle="Bathurst St At King St West" stopTag="7197">
+<direction title="North - 511 Bathurst towards Bathurst Station">
+<prediction epochTime="1420812157355" seconds="109" minutes="1" isDeparture="false" branch="511" dirTag="511_1_511" vehicle="8084" block="511_1_10" tripTag="25585393"/>
+<prediction epochTime="1420812276534" seconds="228" minutes="3" isDeparture="false" branch="511" dirTag="511_1_511" vehicle="4162" block="511_2_20" tripTag="25585394"/>
+<prediction epochTime="1420812333740" seconds="285" minutes="4" isDeparture="false" branch="511" dirTag="511_1_511" vehicle="1302" block="511_1_10" tripTag="25585393"/>
+<prediction epochTime="1420812345012" seconds="297" minutes="4" isDeparture="false" branch="511" dirTag="511_1_511" vehicle="1332" block="511_1_10" tripTag="25585393"/>
+<prediction epochTime="1420812615093" seconds="567" minutes="9" isDeparture="false" branch="511" dirTag="511_1_511" vehicle="7948" block="511_1_10" tripTag="25585393"/>
+</direction>
+<message text="TTC Customer Service 416-393-4636 (INFO)" priority="Normal"/>
+</predictions>
+</body>

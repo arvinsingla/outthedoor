@@ -1,0 +1,44 @@
+<section class="card time">
+  <div class="card-title">
+    {{date | date:'HH:mm:ss'}}
+  </div>
+  <div class="card-content">
+    {{date | date:'fullDate'}}
+  </div>
+</section>
+
+<section class="transit-route card" ng-repeat="route in transit">
+  <div class="card-title">
+    <h2>{{route._stopTitle}}</h2>
+  </div>
+  <div class="card-content">
+    <ul class="transit-prediction">
+      <li ng-repeat="prediction in route.predictions | limitTo : 4">
+        <span ng-show="prediction._minutes > 1">
+          {{prediction._minutes}} minutes
+        </span>
+        <span ng-show="prediction._minutes == 1">
+          {{prediction._minutes}} minute
+        </span>
+        <span ng-show="prediction._minutes == 0">
+          Arriving
+        </span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="weather card">
+  <div class="card-title">
+    <h2>Weather in Toronto</h2>
+  </div>
+  <div class="card-content">
+    <div class="temp">
+      {{weatherTemp}}&deg;
+    </div>
+    <i class="icon wi" ng-class="weatherIcon"></i>
+    <div class="description">
+      {{weatherDescription}}
+    </div>
+  </div>
+</section>
