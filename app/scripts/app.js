@@ -21,23 +21,6 @@ angular.module('outTheDoorApp', [])
   'interval': 300000,
   'url': 'https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20weather.forecast%20where%20woeid%20%3D%2012511881%20AND%20u%3D%22c%22&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys'
 })
-.directive('transitPrediction', function() {
-  return {
-    template: '{{ prediction }}',
-    link: function(scope, element) {
-      var minutes = scope.prediction._minutes ? scope.prediction._minutes : '';
-      if (minutes > '1') {
-        element.text(minutes + ' minutes');
-      } else if (minutes === '1') {
-        element.text(minutes + ' minute');
-      } else if (minutes === '0') {
-        element.text('Arriving');
-      } else {
-        element.text('');
-      }
-    }
-  };
-})
 .factory('weatherIcon', [function() {
   // Map yahoo codes to weather-icons
   // https://gist.githubusercontent.com/aloncarmel/8575527/raw/313aee5cfa2584a8cdbf4c756d0203bccd04d752/weathericon
@@ -148,6 +131,27 @@ angular.module('outTheDoorApp', [])
     return weatherIcon;
   };
 }])
+// Transit time filter
+.filter('transitTime', function() {
+  return function(input) {
+    var out = 'Unknown';
+    input = input || '';
+    if (input > '1') {
+      out = input + ' minutes';
+    } else if (input === '1') {
+      out = input + ' minute';
+    } else if (input === '0') {
+      out = 'Arriving';
+    }
+    return out;
+  };
+})
+// x2js factory
+.factory('x2js', [ function () {
+    return new X2JS({
+      arrayAccessForm : 'property'
+    });
+}])
 // Date/Time Controller
 .controller('TimeController', ['$scope', '$interval', function TimeController($scope, $interval) {
 
@@ -160,14 +164,13 @@ angular.module('outTheDoorApp', [])
   updateTime();
 }])
 // Transit Controller
-.controller('TransitController', ['$scope', '$http', '$interval', 'transitConfig', function TransitController($scope, $http, $interval, transitConfig) {
+.controller('TransitController', ['$scope', '$http', '$interval', 'transitConfig', 'x2js', function TransitController($scope, $http, $interval, transitConfig, x2js) {
 
   // Function to get and update transit data.
   var getTransitData = function() {
     $http.get(transitConfig.url).
     //$http.get('/publicXMLFeed.xml').
     success(function(data) {
-      var x2js = new X2JS({ arrayAccessForm : 'property'});
       var json = x2js.xml_str2json(data);
       // Reset transit array.
       $scope.transit = [];

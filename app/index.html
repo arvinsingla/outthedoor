@@ -38,6 +38,7 @@
       <div class="card-content">
         <ul class="transit-prediction">
           <li ng-repeat="prediction in route.predictions | limitTo : 4">
+            {{ prediction._minutes | transitTime }}
             <span transit-prediction></span>
           </li>
         </ul>
