@@ -17,15 +17,17 @@
   </head>
   <body ng-app="outTheDoorApp" ng-strict-di>
 
-  <header></header>
+  <header>
+    <h1 class="title">Out the door</h1>
+  </header>
 
   <div class="container" ng-controller="TimeController">
     <section class="card time">
       <div class="card-title">
-        {{date | date:'HH:mm:ss'}}
+        {{ date | date:'HH:mm:ss' }}
       </div>
       <div class="card-content">
-        {{date | date:'fullDate'}}
+        {{ date | date:'fullDate' }}
       </div>
     </section>
   </div>
@@ -33,7 +35,7 @@
   <div class="container" ng-controller="TransitController">
     <section class="transit-route card" ng-repeat="route in transit">
       <div class="card-title">
-        <h2>{{route._stopTitle}}</h2>
+        <h2>{{ route._stopTitle }}</h2>
       </div>
       <div class="card-content">
         <ul class="transit-prediction">
@@ -53,11 +55,14 @@
       </div>
       <div class="card-content">
         <div class="temp">
-          {{weatherTemp}}&deg;
+          {{ weatherTemp }}&deg;
+        </div>
+        <div class="chill" ng-if="weatherWindChill">
+          Feels like {{ weatherWindChill }}&deg;
         </div>
         <i class="icon wi" ng-class="weatherIcon"></i>
         <div class="description">
-          {{weatherDescription}}
+          {{ weatherDescription }}
         </div>
       </div>
     </section>

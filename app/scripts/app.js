@@ -207,12 +207,9 @@ angular.module('outTheDoorApp', [])
       // Reset transit array.
       if (!!data.query.results.channel) {
         var weather = data.query.results.channel;
-        // Get the correct temperature
-        if (!!weather.wind.chill) {
-          $scope.weatherTemp = weather.wind.chill;
-        } else {
-          $scope.weatherTemp = weather.item.condition.temp;
-        }
+        // Get the temperatures
+        $scope.weatherTemp = weather.item.condition.temp;
+        $scope.weatherWindChill = weather.wind.chill;
         $scope.weatherIcon = weatherIcon(weather.item.condition.code);
         $scope.weatherDescription = weather.item.condition.text;
       }
